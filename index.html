@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>الشركة المصرية اليابانية</title>
   <meta name="description" content="الشركة المصرية اليابانية للاستيراد والتصدير: مولدات وكلاركات ومواتير ومعدات ثقيلة وقطع غيار سيارات مستعملة، مستوردة مباشرة من الخارج.">
-  <meta name="keywords" content="">
+  <meta name="theme-color" content="#0B1F3A">
 
   <!-- Favicons -->
   <link href="assets/img/logo.jpg" rel="icon">
@@ -23,7 +23,6 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -57,19 +56,19 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="assets/img/logo.jpg" alt="Egyptian Japanese Import and Export logo">
-        <h1 class="sitename" data-i18n="site.name">الشركة المصرية اليابانية</h1><span>.</span>
+        <h1 class="sitename" data-i18n="site.name">الشركة المصرية اليابانية</h1>
       </a>
 
       <button type="button" id="lang-switch" class="lang-switch" lang="en" aria-label="Switch to English"><i class="bi bi-translate"></i> <span data-i18n="lang.switch">English</span></button>
 
       <nav id="navmenu" class="navmenu">
-        <ul>
+        <ul id="navmenu-list">
           <li><a href="index.html#hero" class="active" data-i18n="nav.home">الرئيسية</a></li>
           <li><a href="index.html#about" data-i18n="nav.about">من نحن</a></li>
           <li><a href="index.html#equipment" data-i18n="nav.equipment">معداتنا</a></li>
           <li><a href="index.html#contact" data-i18n="nav.contact">تواصل معنا</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <button type="button" class="mobile-nav-toggle d-xl-none" aria-label="القائمة" aria-expanded="false" aria-controls="navmenu-list"><i class="bi bi-list"></i></button>
       </nav>
 
     </div>
@@ -80,17 +79,17 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/equipment/cat-port-arrival.jpg" alt="Caterpillar generator arriving at port" data-aos="fade-in">
+      <img src="assets/img/equipment/cat-port-arrival.jpg" alt="Caterpillar generator arriving at port" fetchpriority="high">
 
       <div class="container">
         <div class="row">
           <div class="col-lg-10">
-            <span class="hero-eyebrow" data-aos="fade-up" data-i18n="hero.eyebrow">الشركة المصرية اليابانية للاستيراد والتصدير</span>
-            <h2 data-aos="fade-up" data-aos-delay="100" data-i18n="hero.title">مرحبًا بكم في موقعنا</h2>
-            <p data-aos="fade-up" data-aos-delay="200" data-i18n="hero.text">نحن شركة موثوقة نفخر بتوفير قطع غيار سيارات مستعملة عالية الجودة منذ عام 1980، مستوردة مباشرة من اليابان والصين، بالإضافة إلى مولدات وكلاركات ومعدات ثقيلة مستعملة بحالة ممتازة.</p>
-            <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+            <span class="hero-eyebrow" data-i18n="hero.eyebrow">الشركة المصرية اليابانية للاستيراد والتصدير</span>
+            <h2 data-i18n="hero.title">مرحبًا بكم في موقعنا</h2>
+            <p data-i18n="hero.text">نحن شركة موثوقة نفخر بتوفير قطع غيار سيارات مستعملة عالية الجودة منذ عام 1980، مستوردة مباشرة من اليابان والصين، بالإضافة إلى مولدات وكلاركات ومعدات ثقيلة مستعملة بحالة ممتازة.</p>
+            <div class="hero-actions">
               <a href="https://wa.me/201022674800" class="btn-brand" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> <span data-i18n="hero.whatsapp">راسلنا على واتساب</span></a>
-              <a href="mailto:info@egyptionjapanese.com?subject=Subscription%20Request&body=Please%20subscribe%20me%20to%20your%20newsletter." class="btn-brand-outline"><i class="bi bi-envelope"></i> <span data-i18n="hero.email">راسلنا بالبريد</span></a>
+              <a href="mailto:info@egyptionjapanese.com" class="btn-brand-outline"><i class="bi bi-envelope"></i> <span data-i18n="hero.email">راسلنا بالبريد</span></a>
             </div>
           </div>
         </div>
@@ -108,7 +107,7 @@
     <!-- About Section -->
     <section id="about" class="about section light-background">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up">
         <div class="row align-items-xl-center gy-5">
 
           <div class="col-xl-5 content">
@@ -121,7 +120,7 @@
           <div class="col-xl-7">
             <div class="row gy-4 icon-boxes">
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
                 <div class="icon-box">
                   <i class="bi bi-globe"></i>
                   <h3 data-i18n="about.box1.title">استيراد عالمي</h3>
@@ -129,7 +128,7 @@
                 </div>
               </div> <!-- End Icon Box -->
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon-box">
                   <i class="bi bi-shop"></i>
                   <h3 data-i18n="about.box2.title">خبرة محلية</h3>
@@ -137,7 +136,7 @@
                 </div>
               </div> <!-- End Icon Box -->
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
                 <div class="icon-box">
                   <i class="bi bi-box-seam"></i>
                   <h3 data-i18n="about.box3.title">ضمان الجودة</h3>
@@ -145,7 +144,7 @@
                 </div>
               </div> <!-- End Icon Box -->
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
                   <i class="bi bi-headset"></i>
                   <h3 data-i18n="about.box4.title">دعم متميز</h3>
@@ -170,7 +169,7 @@
         <p data-i18n="equipment.subtitle">مولدات ومعدات ثقيلة مستعملة بحالة ممتازة، مستوردة مباشرة من الخارج.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up">
 
         <div class="equip-grid">
 
@@ -284,7 +283,7 @@
       <img src="assets/img/equipment/cat-3306-b.jpg" alt="Caterpillar generator set on a truck">
 
       <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="row justify-content-center" data-aos="fade-up">
           <div class="col-xl-10">
             <div class="text-center">
               <h3 data-i18n="cta.title">اعثر على الماكينة أو القطعة المناسبة اليوم</h3>
@@ -305,12 +304,12 @@
         <h2 data-i18n="contact.title">تواصل معنا</h2>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up">
 
         <div class="row gy-4">
 
               <div class="col-lg-3 col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                <div class="info-item" data-aos="fade-up" data-aos-delay="50">
                   <i class="bi bi-geo-alt"></i>
                   <h3 data-i18n="contact.address">العنوان</h3>
                   <p data-i18n="contact.country">مصر</p>
@@ -319,7 +318,7 @@
               </div><!-- End Info Item -->
 
               <div class="col-lg-3 col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                <div class="info-item" data-aos="fade-up" data-aos-delay="100">
                   <i class="bi bi-telephone"></i>
                   <h3 data-i18n="contact.call">اتصل بنا</h3>
                   <p><a href="tel:+201222233790" dir="ltr">+201222233790</a></p>
@@ -328,7 +327,7 @@
               </div><!-- End Info Item -->
 
               <div class="col-lg-3 col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                <div class="info-item" data-aos="fade-up" data-aos-delay="150">
                   <i class="bi bi-envelope"></i>
                   <h3 data-i18n="contact.email">راسلنا</h3>
                   <p><a href="mailto:info@egyptionjapanese.com">info@egyptionjapanese.com</a></p>
@@ -336,7 +335,7 @@
               </div><!-- End Info Item -->
 
               <div class="col-lg-3 col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                <div class="info-item" data-aos="fade-up" data-aos-delay="200">
                   <i class="bi bi-clock"></i>
                   <h3 data-i18n="contact.hours">مواعيد العمل</h3>
                   <p data-i18n="contact.days">السبت - الخميس</p>
@@ -389,17 +388,10 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS Files -->
   <script src="assets/js/i18n.js"></script>

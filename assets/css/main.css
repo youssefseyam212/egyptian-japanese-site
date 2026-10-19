@@ -146,7 +146,7 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
-  transition: all 0.5s;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   z-index: 997;
 }
 
@@ -207,7 +207,7 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(11, 31, 58, 0.12);
 }
 
 /* Index Page Header
@@ -584,41 +584,6 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  overflow: hidden;
-  background: var(--background-color);
-  transition: all 0.6s ease-out;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
@@ -928,16 +893,15 @@ section,
   font-size: 18px;
   margin-left: 5px;
   line-height: 0;
-  transition: 0.3s;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .about .content .read-more:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  padding-right: 19px;
 }
 
 .about .content .read-more:hover i {
-  margin-left: 10px;
+  transform: translateX(4px);
 }
 
 .about .icon-box {
@@ -2883,7 +2847,7 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: 0.3px;
+  letter-spacing: 0;
 }
 
 [lang="ar"] {
@@ -2899,7 +2863,7 @@ h6 {
   --nav-color: rgba(255, 255, 255, 0.78);
   --nav-hover-color: var(--brand-gold);
   padding: 12px 0;
-  border-bottom: 4px solid var(--brand-gold);
+  border-bottom: 1px solid color-mix(in srgb, var(--brand-gold), transparent 55%);
 }
 
 .index-page .header {
@@ -2917,7 +2881,7 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2930,7 +2894,7 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu a,
   .navmenu a:focus {
-    font-size: 19px;
+    font-size: 1.1875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -2944,7 +2908,7 @@ h6 {
   }
 
   .header .logo h1 {
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 0.5px;
   }
 }
@@ -2952,9 +2916,10 @@ h6 {
 /* Section titles
 ------------------------------*/
 .section-title h2 {
-  font-size: 44px;
+  font-size: 2.75rem;
+  line-height: 1.1;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0;
 }
 
 .section-title h2:before,
@@ -2969,7 +2934,7 @@ h6 {
 
 @media (max-width: 575px) {
   .section-title h2 {
-    font-size: 34px;
+    font-size: 2.125rem;
   }
 
   .section-title h2:before,
@@ -2991,7 +2956,7 @@ h6 {
   border-radius: 4px;
   border: 2px solid var(--brand-red);
   font-family: var(--heading-font);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -3037,15 +3002,16 @@ h6 {
   border-left: 3px solid var(--brand-red);
   color: var(--brand-gold);
   font-family: var(--heading-font);
-  font-size: 19px;
+  font-size: 1.1875rem;
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
 .hero h2 {
-  font-size: clamp(40px, 6vw, 76px);
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
   line-height: 1.05;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
 }
 
@@ -3064,11 +3030,11 @@ h6 {
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .hero .hero-eyebrow {
-    font-size: 15px;
+    font-size: 0.9375rem;
     letter-spacing: 2px;
   }
 }
@@ -3084,7 +3050,7 @@ h6 {
 .brands-strip p {
   margin: 0;
   font-family: var(--heading-font);
-  font-size: 21px;
+  font-size: 1.3125rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 1.35;
@@ -3092,7 +3058,7 @@ h6 {
 
 .brands-strip p[lang="ar"] {
   font-family: "Cairo", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 800;
   line-height: 1.7;
   margin-bottom: 2px;
@@ -3104,21 +3070,21 @@ h6 {
   background: var(--brand-navy);
   color: var(--brand-gold);
   border-radius: 2px;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .about .content h2 {
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.1;
   text-transform: uppercase;
 }
 
 .about .content .read-more {
   border-radius: 4px;
-  font-size: 19px;
+  font-size: 1.1875rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -3141,7 +3107,7 @@ h6 {
 }
 
 .about .icon-box h3 {
-  font-size: 28px;
+  font-size: 1.75rem;
   text-transform: uppercase;
 }
 
@@ -3192,7 +3158,7 @@ h6 {
 .equipment .equip-caption h3 {
   margin: 0;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
@@ -3202,7 +3168,7 @@ h6 {
   display: block;
   color: var(--brand-gold);
   font-family: var(--heading-font);
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
@@ -3228,11 +3194,11 @@ h6 {
   }
 
   .equipment .equip-caption h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .equipment .equip-caption span {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -3244,7 +3210,7 @@ h6 {
 }
 
 .call-to-action h3 {
-  font-size: 46px;
+  font-size: 2.875rem;
   text-transform: uppercase;
 }
 
@@ -3255,7 +3221,7 @@ h6 {
 .call-to-action .cta-btn {
   border-color: var(--brand-gold);
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -3279,12 +3245,12 @@ h6 {
 }
 
 .contact .info-item h3 {
-  font-size: 26px;
+  font-size: 1.625rem;
   text-transform: uppercase;
 }
 
 .contact .info-item p {
-  font-size: 15px;
+  font-size: 0.9375rem;
   overflow-wrap: anywhere;
 }
 
@@ -3305,7 +3271,7 @@ h6 {
   min-height: 48px;
   padding: 10px 36px;
   font-family: var(--heading-font);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -3326,7 +3292,7 @@ h6 {
 
 .footer .footer-about .logo span {
   display: block;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 1.1;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -3335,7 +3301,7 @@ h6 {
 .footer .footer-about .logo .sitename-ar {
   color: var(--brand-gold);
   font-family: "Cairo", sans-serif;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 800;
   letter-spacing: 0;
   line-height: 1.6;
@@ -3350,7 +3316,7 @@ h6 {
 
 .footer h4 {
   color: var(--brand-gold);
-  font-size: 22px;
+  font-size: 1.375rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -3372,7 +3338,7 @@ h6 {
   height: 44px;
   border-color: var(--brand-gold);
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .footer .social-links a:hover {
@@ -3401,7 +3367,7 @@ h6 {
   background: transparent;
   color: #ffffff;
   font-family: "Cairo", "Open Sans", sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.4;
   white-space: nowrap;
@@ -3440,7 +3406,7 @@ h6 {
 }
 
 [dir="rtl"] .brands-strip p {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 800;
   line-height: 1.7;
 }
@@ -3492,14 +3458,8 @@ h6 {
   transform: scaleX(-1);
 }
 
-[dir="rtl"] .about .content .read-more:hover {
-  padding-right: 24px;
-  padding-left: 19px;
-}
-
 [dir="rtl"] .about .content .read-more:hover i {
-  margin-left: 0;
-  margin-right: 10px;
+  transform: scaleX(-1) translateX(4px);
 }
 
 [dir="rtl"] .footer .footer-about .logo img {
@@ -3514,4 +3474,228 @@ h6 {
 
 [dir="rtl"] .php-email-form .error-message {
   text-align: right;
+}
+
+/*--------------------------------------------------------------
+# Interaction & material polish
+# Press feedback on touch-down, translucent header, consistent
+# radii, and gentler alternatives for reduced motion/transparency.
+--------------------------------------------------------------*/
+:root {
+  --radius-control: 8px;
+  --radius-card: 14px;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-sheet: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 2px;
+}
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* Translucent header: content scrolls underneath instead of behind a solid bar */
+.index-page.scrolled .header {
+  --background-color: rgba(11, 31, 58, 0.72);
+  --nav-color: rgba(255, 255, 255, 0.9);
+  border-bottom-color: color-mix(in srgb, var(--brand-gold), transparent 55%);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Controls: one radius, colour transitions only, instant press feedback */
+.btn-brand,
+.btn-brand-outline,
+.lang-switch,
+.scroll-top {
+  border-radius: var(--radius-control);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, opacity 0.3s ease, visibility 0.3s, transform 0.25s var(--ease-out);
+}
+
+.call-to-action .cta-btn,
+.about .content .read-more {
+  border-radius: var(--radius-control);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.25s var(--ease-out);
+}
+
+.footer .social-links a {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.25s var(--ease-out);
+}
+
+.btn-brand:active,
+.btn-brand-outline:active,
+.lang-switch:active,
+.scroll-top:active,
+.call-to-action .cta-btn:active,
+.about .content .read-more:active,
+.footer .social-links a:active,
+.mobile-nav-toggle:active {
+  transform: scale(0.96);
+  transition-duration: 0.08s;
+}
+
+.mobile-nav-toggle {
+  padding: 6px;
+  border: 0;
+  background: none;
+  transition: color 0.2s ease, transform 0.25s var(--ease-out);
+}
+
+/* Cards */
+.about .icon-box,
+.contact .info-item {
+  border-radius: var(--radius-card);
+}
+
+.equipment .equip-grid {
+  gap: 10px;
+}
+
+.equipment .equip-card {
+  border-radius: 12px;
+  isolation: isolate;
+  transition: transform 0.25s var(--ease-out);
+}
+
+.equipment .equip-card img {
+  transition: transform 0.6s var(--ease-out);
+}
+
+.equipment .equip-card:active {
+  transform: scale(0.98);
+  transition-duration: 0.08s;
+}
+
+/* No sticky zoom after a tap on touch screens */
+@media (hover: none) {
+  .equipment .equip-card:hover img {
+    transform: none;
+  }
+}
+
+/* Mobile menu: a panel that grows out of the menu button over a blurred backdrop */
+@media (max-width: 1199px) {
+  .navmenu ul {
+    inset: 68px 16px auto 16px;
+    padding: 8px 0;
+    border-radius: var(--radius-card);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    transform-origin: top right;
+  }
+
+  [dir="rtl"] .navmenu ul {
+    transform-origin: top left;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    padding: 14px 24px;
+    font-size: 1.125rem;
+  }
+
+  .mobile-nav-active .navmenu {
+    background: rgba(11, 31, 58, 0.5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    animation: nav-scrim-in 0.25s ease-out both;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    animation: nav-panel-in 0.35s var(--ease-sheet) both;
+  }
+}
+
+@keyframes nav-scrim-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes nav-panel-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(-8px);
+  }
+}
+
+/* Reduced motion: keep fades, drop movement, zoom and the fixed-photo parallax */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .equipment .equip-card:hover img,
+  .equipment .equip-card:focus-visible img,
+  .about .content .read-more:hover i,
+  .btn-brand:active,
+  .btn-brand-outline:active,
+  .lang-switch:active,
+  .scroll-top:active,
+  .call-to-action .cta-btn:active,
+  .about .content .read-more:active,
+  .footer .social-links a:active,
+  .mobile-nav-toggle:active,
+  .equipment .equip-card:active {
+    transform: none;
+  }
+
+  [dir="rtl"] .about .content .read-more:hover i {
+    transform: scaleX(-1);
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    animation-name: nav-scrim-in;
+  }
+
+  .call-to-action img {
+    position: absolute;
+  }
+}
+
+/* Reduced transparency: solid surfaces, no blur */
+@media (prefers-reduced-transparency: reduce) {
+  .index-page.scrolled .header {
+    --background-color: var(--brand-navy);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .mobile-nav-active .navmenu {
+    background: rgba(11, 31, 58, 0.85);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* Increased contrast: solid header with a clear edge, brighter secondary text */
+@media (prefers-contrast: more) {
+  .index-page.scrolled .header {
+    --background-color: var(--brand-navy);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-bottom-color: var(--brand-gold);
+  }
+
+  .hero p,
+  .call-to-action p,
+  .footer .footer-about p,
+  .footer .footer-contact p {
+    color: #ffffff;
+  }
 }
